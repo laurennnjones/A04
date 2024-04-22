@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The World of Percy Jackson</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Custom Cursor Style -->
+    <style type="text/css">
+      * {
+        cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.ani),
+          url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.png), auto !important;
+      }
+      /* Remove border around images */
+      img {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!-- Navigation menu -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="arrival.html">Percy's Arrival</a></li>
+        <li><a href="heritage.html">Son of Poseidon</a></li>
+        <li><a href="cabin.html">Poseidon Cabin</a></li>
+        <li><a href="greek_mythology.html">Greek Mythology</a></li>
+    </ul>
+    </nav>
+
+    <div class="video-background">
+      <!-- Video background -->
+      <iframe
+        src="https://www.youtube.com/embed/fG_X-cx5Szg?autoplay=1&mute=1&controls=0&loop=1&playlist=fG_X-cx5Szg"
+        frameborder="0"
+        allowfullscreen
+      >
+      </iframe>
+      <div class="title-content">
+        <!-- Title content -->
+        <img src="Images/PercyJacksonLogo.png" alt="Camp Half-Blood" />
+        <!-- Additional title content -->
+      </div>
+    </div>
+
+    <main id="main-content">
+      <!-- Main content sections -->
+      <section>
+        <h2>Welcome to the World of Percy Jackson</h2>
+        <p>
+          Embark on an unforgettable adventure with Percy Jackson, a young
+          demigod whose life takes a thrilling turn when he discovers his divine
+          heritage. Born to a mortal mother and Poseidon, the god of the sea,
+          Percy's journey is fraught with danger, friendship, and discovery.
+        </p>
+        <p>
+          The story begins when Percy learns that he is a demigod, a child of a
+          Greek god and a mortal. As he struggles to come to terms with his
+          newfound identity, he is thrust into a world filled with monsters,
+          gods, and ancient prophecies. Accompanied by his friends Annabeth
+          Chase and Grover Underwood, Percy navigates the treacherous waters of
+          the mythical world, facing challenges that test his courage and
+          resolve at every turn. From battling the Minotaur in the heart of the
+          Labyrinth to braving the depths of the Underworld, Percy's journey is
+          filled with perilous quests and unexpected allies. But amidst the
+          chaos and danger, Percy discovers the true meaning of friendship,
+          loyalty, and sacrifice. With each victory and defeat, he grows
+          stronger, honing his powers and uncovering the secrets of his past.
+        </p>
+      </section>
+
+      <div class="carousel">
+        <!-- Carousel for navigating between pages -->
+        <a href="arrival.html" class="carousel-item">
+          <img src="Images/PercyWithWave.png" alt="Percy's Arrival" />
+          <span class="caption">Percy's Arrival</span>
+        </a>
+        <a href="heritage.html" class="carousel-item">
+          <img src="Images/PoseidonAndSea.jpg" alt="Son of Poseidon" />
+          <span class="caption">Son of Poseidon</span>
+        </a>
+        <a href="cabin.html" class="carousel-item">
+          <img src="Images/PercyInCabin.png" alt="Poseidon Cabin" />
+          <span class="caption">Poseidon Cabin</span>
+        </a>
+      </div>
+
+      <section class="highlight">
+        <h2>What Your Favorite Character Says About You</h2>
+        <p>
+          Each character in the Percy Jackson series embodies unique traits and
+          values. Choose your favorite character to see what it might say about
+          your own personality:
+        </p>
+        <label for="favorite-character">Select your favorite character:</label>
+        <select id="favorite-character" onchange="showCharacterMeaning()">
+          <option value="">--Please choose an option--</option>
+          <option value="percy">Percy Jackson</option>
+          <option value="annabeth">Annabeth Chase</option>
+          <option value="grover">Grover Underwood</option>
+        </select>
+        <div id="character-meaning"></div>
+      </section>
+
+      <section>
+        <h2>Explore Percy Jackson Books</h2>
+        <select id="book-selection" onchange="updateBookDetails(this.value)">
+          <option value="">Select a Book</option>
+          <option value="9780141325374">The Lightning Thief</option>
+          <option value="9781423103349">The Sea of Monsters</option>
+          <option value="9781423101475">The Titan's Curse</option>
+          <!-- More books can be added here -->
+        </select>
+        <div id="book-details"></div>
+        <div id="book-reviews"></div>
+        <div id="similar-books"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; The Power of Poseidon's Percy Jackson</p>
+      <img src="Images/PoseidonTrident.png" alt="Footer Image" />
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

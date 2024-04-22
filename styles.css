@@ -1,0 +1,314 @@
+/* General Styles */
+body {
+  font-family: "Droid Serif", sans-serif;
+  background-color: white;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #01579b; /* Darker ocean blue */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav {
+  background-color: white; /* White background */
+  color: #01579b; /* Darker ocean blue */
+  text-align: center;
+  padding: 10px 0;
+  position: relative; /* Ensure the video background respects the position of the navigation bar */
+  z-index: 1; /* Ensure the navigation bar appears above other content */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #1d8eb3; /* Medium ocean blue */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.video-background {
+  position: relative;
+  width: 100%; /* Take up 100% of the width of its parent */
+  height: 500px; /* Adjust this value to suit your design */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove any default border */
+  transform: scale(
+    2
+  ); /* Adjust the scale factor as needed to zoom in on the video */
+  object-fit: cover; /* Stretch the video to fill the container, if you still want to stretch it */
+}
+
+.title-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensures the text appears above the video */
+  color: white; /* Or any color that makes the text readable on the video */
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #01579b; /* Darker ocean blue */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Specific Element Styles */
+.highlight {
+  background-color: #b3e5fc; /* Soft seafoam */
+  border: 2px solid #0277bd; /* Bright ocean blue */
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  line-height: 1.6; /* Increase line height for better readability */
+}
+
+img {
+  border: 2px solid #0277bd; /* Bright ocean blue */
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+/* Fonts */
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif;
+  color: #01579b; /* Keeping headers a different shade of blue */
+}
+
+h2 {
+  color: #1d8eb3; /* Medium ocean blue */
+  font-family: "Merriweather", serif; /* Flowy font */
+  margin-bottom: 20px; /* Add some space after headings */
+}
+
+/* ID and Class-based Selectors */
+#main-content {
+  width: 80%;
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center; /* Centers the items horizontally */
+  align-items: center; /* Centers the items vertically */
+}
+
+.carousel-item {
+  margin: 20px 10px;
+  width: 200px; /* Set a specific width for the images */
+
+  display: block;
+  overflow: hidden; /* Hide any overflowing content */
+  position: relative; /* Ensures the caption appears above the image */
+}
+
+.carousel-item img {
+  width: 200px; /* Set a specific width for the images */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the images horizontally */
+}
+
+.carousel-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.carousel-item:hover .caption {
+  visibility: visible;
+  opacity: 1;
+}
+
+.character-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-description {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.character-image {
+  width: 150px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+  object-fit: cover; /* Cover the area without stretching */
+  border-radius: 50%; /* Circular images */
+  margin-bottom: 10px;
+  border: 3px solid #0277bd; /* Bright ocean blue border */
+}
+
+.styled-select {
+  border: 1px solid #0277bd; /* Bright ocean blue */
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Same style as the favorite character select box from index.html */
+.styled-select {
+  background-color: #b3e5fc; /* Soft seafoam */
+  font-size: 16px; /* Readable text size */
+  color: #01579b; /* Darker ocean blue */
+  border: none; /* Remove default border */
+  cursor: pointer;
+}
+
+.styled-select:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 10px #0277bd; /* Add a blue glow on focus */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .character-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character {
+    margin: 10px;
+  }
+}
+
+footer img {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px; /* Adjust top margin as needed */
+}
+
+.ordered-list-center {
+  text-align: center;
+}
+
+.heritage-image {
+  width: 100%; /* This will make the image responsive, taking the full width of its parent container */
+  height: auto; /* This will maintain the aspect ratio of the image */
+  max-width: 600px; /* You can set a max-width to ensure it doesn't get too large on bigger screens */
+  display: block; /* This will prevent inline elements from sitting next to your image */
+  margin: 0 auto; /* This will center your image within its container */
+}
+
+.cabin-image {
+  width: 100%; /* Responsive width */
+  max-width: 600px; /* Maximum size to maintain quality */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevent inline elements from sitting next to images */
+  margin: 20px auto; /* Center the image and add some space around it */
+  border-radius: 10px; /* Optional: adds rounded corners for a softer look */
+}
+
+.trident {
+  display: block; /* Change display to block to allow margin auto to work */
+  margin: 0 auto; /* This will center the image horizontally within its container */
+  max-width: 100%; /* Ensures the image is responsive and does not overflow its container */
+  height: auto; /* Maintains the aspect ratio of the image */
+}
+
+#book-selection {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+#book-details,
+#book-reviews,
+#similar-books {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#book-details img,
+#similar-books img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#similar-books div {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Start https://www.cursors-4u.com */
+* {
+  cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.ani),
+    url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.png), auto !important;
+}
+/* End https://www.cursors-4u.com */
